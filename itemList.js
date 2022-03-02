@@ -22,6 +22,7 @@ const colors = {
     fairy: '#D685AD',
 };
 
+const pokemonEl = document.querySelectorAll(".main__articleList li");
 
 async function itemList(items) {
     const pokemons = await Promise.all(
@@ -52,15 +53,20 @@ async function itemList(items) {
         item_section.innerHTML += output
 
     })
+    createTypeColor();
 };
-/*
+
 function createTypeColor() {
     const pokemonEl = document.querySelectorAll(".main__articleList li");
 
+    pokemonEl.forEach(function(pokemonType){
+        
+    })
+    console.log(pokemonEl)
     console.log(colors)
 
 }
-*/
+
 export default itemList
 
 //getMovies

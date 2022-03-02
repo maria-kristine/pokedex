@@ -1,7 +1,7 @@
 import itemList from "./itemList.js"
 
 function findMovie(keyword){
-    fetch(`https://pokeapi.co/api/v2/pokemon?limit=898`)
+    fetch(`https://pokeapi.co/api/v2/pokemon?limit=10228`)
     .then (function(response){
         if(response.status !== 200){
             console.log("nææhh") //TODO: bedre brugebesked
