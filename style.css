@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+main{
+    padding-top: 140px;
+    width: 1080px;
+    margin: 0 auto;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 50px 10px 40px;
+    box-shadow: 3px 5px 5px #00000010;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+.navigation__img{
+    width: 20%;
+}
+.navigation__form{
+    display: flex;
+    align-self: center;
+    width: 40%;
+    height: 40px;
+    margin-left: auto;
+    align-items: center;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 50px;
+    padding: 10px;
+    background-color: #fff;
+}
+.input__field{
+    border: none;
+    width: 100%;
+    outline: none;
+    margin: 0 10px;
+}
+.input__button{
+    border: none;
+    background-color: #fff;
+}
+.items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+}
+.main__article{
+    display: grid;
+    background-color: rgb(243, 243, 243);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 3px 5px 5px #00000030;
+    cursor: pointer;
+}
+.main__article:hover{
+    box-shadow: 3px 5px 5px #00000070;
+}
+.main__articleList{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px 0;
+}
+.main__articleImg{
+    width: 50%;
+    margin: 0 auto;
+}
+.main__articleHeading{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: normal;
+}
+.main__articleText{
+    text-align: center;
+}
+.main__articleId{
+    text-align: center;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    width: 20%;
+}
+.footer{
+    background-color: #3c5aa6;
+    color: #fff;
+    padding: 150px 0 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+.footer__Text{
+    padding-bottom: 10px;
+}
+/*singelPokemon*/
+
+.getPokemon{
+    width: 700px;
+    margin: 0 auto;
+}
+.getPokemon__Section{
+    background-color: rgb(243, 243, 243);
+    border-radius: 20px;
+    padding-top: 200px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    box-shadow: 3px 5px 5px #00000030;
+}
+.getPokemon__heading{
+    text-align: center;
+    font-size: 2em;
+    font-weight: normal;
+}
+.getPokemon__HP, .getPokemon__XP{
+    font-weight: lighter;
+}
+.getPokemon__Line{
+    width: 40%;
+    height: 10px;
+    background-color: rgb(115, 224, 179);
+    border-radius: 50px;
+    margin: 15px auto;
+}
+.getPokemon__Button{
+    display: block;
+    align-items: center;
+    width: 50%;
+    padding: 20px 0;
+    border-radius: 50px;
+    background-image: linear-gradient(90deg, rgb(115, 224, 179) 0%, rgb(91, 197, 153) 100%);
+    border: none;
+    color: #fff;
+    margin: 50px auto;
+    cursor: pointer;
+    letter-spacing: 5px;
+}
+.getPokemon__div{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+    font-weight: lighter;
+}
+.getPokemon__List{
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    justify-content: center;
+    padding: 0 15px 5px 15px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+.getPokemon__img{
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: -180px;
+}
+.getPokemon__Text{
+    padding: 0 15px 5px 15px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
