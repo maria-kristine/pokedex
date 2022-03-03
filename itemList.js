@@ -20,9 +20,9 @@ const colors = {
     dark: '#705746',
     steel: '#B7B7CE',
     fairy: '#D685AD',
+    undefined: '#D3D3D3'
 };
 
-const pokemonEl = document.querySelectorAll(".main__articleList li");
 
 async function itemList(items) {
     const pokemons = await Promise.all(
@@ -39,9 +39,16 @@ async function itemList(items) {
     );
 
     pokemons.forEach(function (pokemon) {
+
+        const currentImg = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
         const types = pokemon.types.map(
-            (type) => "<li>" + type.type.name + "</li>"
+            (type) => `<li class ="type__backgroundcolor" style="background-color:${colors[type.type.name]}">${type.type.name}</li>`
         );
+
+        if(currentImg === null){
+            currentImg = "image-coming-soon.jpeg"
+        }
+
         const output =
             `<article class="main__article" onclick="window.location.href='/pokemon.html?id=${pokemon.id}'">
             <p class="main__articleId">#${pokemon.id.toString().padStart(3, "0")}</p>
@@ -51,25 +58,11 @@ async function itemList(items) {
         </article>`
 
         item_section.innerHTML += output
-
+        console.log(currentImg)
     })
-    createTypeColor();
 };
 
-function createTypeColor() {
-    const pokemonEl = document.querySelectorAll(".main__articleList li");
-
-    pokemonEl.forEach(function(pokemonType){
-        
-    })
-    console.log(pokemonEl)
-    console.log(colors)
-
-}
 
 export default itemList
 
 //getMovies
-
-//<p class="main__articleText"> Weight: ${(pokemon.weight*0.1).toFixed(0)} kg</p>
-//<p class="main__articleText">Height: ${pokemon.height/10} m</p>

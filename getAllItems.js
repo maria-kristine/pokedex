@@ -10,7 +10,7 @@ let pageLinks = document.getElementsByClassName("links")[0]
 
 console.log(prev.href)
 
-const limit = 27
+const limit = 30
 let offset = (limit * currentPage) - limit
 
 function getAllItems(){
